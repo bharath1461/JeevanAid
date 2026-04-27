@@ -8,48 +8,47 @@ const app = {
     },
     
     async init() {
-        // Setup network listeners
         window.addEventListener('online', () => this.updateNetworkStatus(true));
         window.addEventListener('offline', () => this.updateNetworkStatus(false));
         this.updateNetworkStatus(navigator.onLine);
-        
-        // Setup event listeners
         this.setupListeners();
         
-        // Skip login — create default user and go to home
         try {
-            // Try to restore cached user
-            const cachedUser = await getCachedUser();
-            if (cachedUser) {
-                this.state.user = cachedUser;
-                this.state.language = cachedUser.language || 'en';
-            } else {
-                // Create default local user
-                this.state.user = { id: 'local_user', full_name: 'User', name: 'User', email: '', language: 'en' };
-                await cacheUser(this.state.user);
-            }
-            
-            // Try Supabase session silently
+            // Check existing Supabase session
+            let hasSession = false;
             try {
                 const session = await getSession();
-                if (session) {
+                if (session && session.user) {
                     this.state.user = session.user;
                     this.state.user.full_name = session.user.user_metadata?.full_name || 'User';
+                    hasSession = true;
                 }
-            } catch(e) { /* ignore auth errors */ }
+            } catch(e) { console.log('No active session'); }
             
-            // Check if language was chosen before
-            const savedLang = localStorage.getItem('jeevanaid.lang');
-            if (savedLang) {
-                this.state.language = savedLang;
-                this.navigate('home');
+            // Check cached user if no session
+            if (!hasSession) {
+                const cachedUser = await getCachedUser();
+                if (cachedUser && cachedUser.id !== 'local_user') {
+                    this.state.user = cachedUser;
+                    this.state.language = cachedUser.language || 'en';
+                    hasSession = true;
+                }
+            }
+            
+            if (hasSession) {
+                const savedLang = localStorage.getItem('jeevanaid.lang');
+                if (savedLang) {
+                    this.state.language = savedLang;
+                    this.navigate('home');
+                } else {
+                    this.navigate('language');
+                }
             } else {
-                this.navigate('language');
+                this.navigate('login');
             }
         } catch (e) {
             console.error("Init error:", e);
-            this.state.user = { id: 'local_user', full_name: 'User', name: 'User' };
-            this.navigate('home');
+            this.navigate('login');
         }
     },
     

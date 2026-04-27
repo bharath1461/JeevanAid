@@ -1,7 +1,7 @@
 // ===== JeevanAid Supabase Client =====
 const SUPABASE_URL = 'https://uzfbjrpgpvawguyhngeg.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6ZmJqcnBncHZhd2d1eWhuZ2VnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyODU5MzYsImV4cCI6MjA5Mjg2MTkzNn0.LIwgn_rS2BlcG-28CGw4kG3gYigbJEdS_XEN5QBuKSw';
-const GEMINI_API_KEY = 'AIzaSyDf38wLMZ_BxhSL2DznkJkldcXSw6ArkmI';
+const GEMINI_API_KEY = 'AIzaSyCuZSeCBCSXXTUmsFSwa4A5htnXPKwLRj4';
 
 let _sbClient = null;
 
@@ -140,60 +140,33 @@ async function deleteFamilyMember(memberId) {
   if (error) throw error;
 }
 
-// ===== GEMINI AI =====
-async function askGemini(prompt, systemInstruction) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
-  
-  const body = {
-    contents: [{ parts: [{ text: prompt }] }],
-    systemInstruction: { parts: [{ text: systemInstruction }] },
-    generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1024,
-      responseMimeType: "application/json"
-    }
-  };
-  
-  const res = await fetch(url, {
+// ===== AI (Groq - Free Llama 3.3) =====
+let GROQ_API_KEY = localStorage.getItem('jeevanaid.groq_key') || '';
+function setGroqKey(key) { GROQ_API_KEY = key; localStorage.setItem('jeevanaid.groq_key', key); }
+
+async function askAI(prompt, sysMsg) {
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_API_KEY },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [{ role: 'system', content: sysMsg }, { role: 'user', content: prompt }],
+      temperature: 0.7, max_tokens: 1024,
+      response_format: { type: 'json_object' }
+    })
   });
-  
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Gemini API error: ${res.status} - ${errText}`);
-  }
-  
+  if (!res.ok) { const e = await res.text(); console.error('AI error:', e); throw new Error('AI error: ' + res.status); }
   const data = await res.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!text) throw new Error('No response from Gemini');
-  
-  try {
-    return JSON.parse(text);
-  } catch (e) {
-    return { raw: text };
-  }
+  const text = data.choices?.[0]?.message?.content;
+  if (!text) throw new Error('No AI response');
+  try { return JSON.parse(text); } catch (e) { return { raw: text }; }
 }
 
 async function analyzeSymptoms(symptoms, language) {
   const langMap = { hi: 'Hindi', kn: 'Kannada', en: 'English' };
   const lang = langMap[language] || 'English';
-  const systemInstruction = `You are a medical first-aid AI assistant for the JeevanAid app in India. 
-Analyze the user's symptoms and respond in ${lang}. 
-Return JSON with this exact structure:
-{
-  "condition": "likely condition name",
-  "urgency": "red" or "amber" or "green",
-  "urgency_label": "URGENT" or "MODERATE" or "LOW RISK",
-  "description": "brief description of the condition",
-  "actions": ["action step 1", "action step 2", "action step 3"],
-  "warning": "when to seek immediate help",
-  "disclaimer": "This is AI-powered guidance only. Always consult a qualified doctor."
-}
-urgency red = life threatening, amber = needs attention, green = manageable at home.`;
-  
-  return await askGemini(`Patient symptoms: ${symptoms}`, systemInstruction);
+  const sysMsg = `You are a medical first-aid AI for JeevanAid app in India. Respond in ${lang}. Return JSON: {"condition":"name","urgency":"red/amber/green","urgency_label":"URGENT/MODERATE/LOW RISK","description":"brief desc","actions":["step1","step2","step3"],"warning":"when to seek help","disclaimer":"AI guidance only. Consult a doctor."}. red=life threatening, amber=needs attention, green=home care.`;
+  return await askAI('Patient symptoms: ' + symptoms, sysMsg);
 }
 
 async function identifyMedicine(imageBase64) {

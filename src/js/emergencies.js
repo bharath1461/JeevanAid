@@ -5,23 +5,23 @@ const EMERGENCIES = [
     icon: "dangerous",
     bgColor: "#FFF7ED",
     iconColor: "#EA580C",
-    title: { en: "Snake Bite", hi: "सांप का काटना" },
+    title: { en: "Snake Bite", hi: "सांप का काटना", kn: "ಹಾವು ಕಡಿತ" },
     steps: [
-      { en: "Keep the person calm and still. Movement spreads venom faster.", hi: "व्यक्ति को शांत और स्थिर रखें। हिलने से ज़हर तेज़ी से फैलता है।" },
-      { en: "Remove any rings, watches, or tight clothing near the bite before swelling starts.", hi: "सूजन शुरू होने से पहले काटने के पास की अंगूठी, घड़ी या तंग कपड़े हटा दें।" },
-      { en: "Keep the bitten limb below heart level.", hi: "काटे गए अंग को हृदय के स्तर से नीचे रखें।" },
-      { en: "Cover the bite with a clean, dry bandage.", hi: "काटने की जगह को साफ, सूखी पट्टी से ढकें।" },
-      { en: "Get to a hospital immediately for anti-venom.", hi: "एंटी-वेनम के लिए तुरंत अस्पताल जाएं।" }
+      { en: "Keep the person calm and still. Movement spreads venom faster.", hi: "व्यक्ति को शांत और स्थिर रखें। हिलने से ज़हर तेज़ी से फैलता है।", kn: "ವ್ಯಕ್ತಿಯನ್ನು ಶಾಂತವಾಗಿ ಮತ್ತು ಸ್ಥಿರವಾಗಿ ಇರಿಸಿ. ಚಲನೆಯಿಂದ ವಿಷ ಬೇಗ ಹರಡುತ್ತದೆ." },
+      { en: "Remove any rings, watches, or tight clothing near the bite before swelling starts.", hi: "सूजन शुरू होने से पहले काटने के पास की अंगूठी, घड़ी या तंग कपड़े हटा दें।", kn: "ಊತ ಪ್ರಾರಂಭವಾಗುವ ಮುನ್ನ ಕಡಿತದ ಹತ್ತಿರದ ಉಂಗುರ, ಗಡಿಯಾರ ಅಥವಾ ಬಿಗಿ ಬಟ್ಟೆಗಳನ್ನು ತೆಗೆಯಿರಿ." },
+      { en: "Keep the bitten limb below heart level.", hi: "काटे गए अंग को हृदय के स्तर से नीचे रखें।", kn: "ಕಡಿತಕ್ಕೊಳಗಾದ ಅಂಗವನ್ನು ಹೃದಯದ ಮಟ್ಟಕ್ಕಿಂತ ಕೆಳಗೆ ಇರಿಸಿ." },
+      { en: "Cover the bite with a clean, dry bandage.", hi: "काटने की जगह को साफ, सूखी पट्टी से ढकें।", kn: "ಕಡಿತವನ್ನು ಶುಚಿಯಾದ, ಒಣ ಬ್ಯಾಂಡೇಜ್‌ನಿಂದ ಮುಚ್ಚಿ." },
+      { en: "Get to a hospital immediately for anti-venom.", hi: "एंटी-वेनम के लिए तुरंत अस्पताल जाएं।", kn: "ಆಂಟಿ-ವೆನಮ್‌ಗಾಗಿ ತಕ್ಷಣ ಆಸ್ಪತ್ರೆಗೆ ಹೋಗಿ." }
     ],
     dos: [
-      { en: "Keep the person calm and immobile", hi: "व्यक्ति को शांत और स्थिर रखें" },
-      { en: "Note the time of the bite", hi: "काटने का समय नोट करें" },
-      { en: "Remove jewelry near bite area", hi: "काटने के पास के गहने हटाएं" }
+      { en: "Keep the person calm and immobile", hi: "व्यक्ति को शांत और स्थिर रखें", kn: "ವ್ಯಕ್ತಿಯನ್ನು ಶಾಂತವಾಗಿ ಇರಿಸಿ" },
+      { en: "Note the time of the bite", hi: "काटने का समय नोट करें", kn: "ಕಡಿತದ ಸಮಯವನ್ನು ಗಮನಿಸಿ" },
+      { en: "Remove jewelry near bite area", hi: "काटने के पास के गहने हटाएं", kn: "ಕಡಿತದ ಹತ್ತಿರದ ಆಭರಣಗಳನ್ನು ತೆಗೆಯಿರಿ" }
     ],
     donts: [
-      { en: "Do NOT cut the wound or try to suck out venom", hi: "घाव को काटें नहीं या ज़हर चूसने की कोशिश न करें" },
-      { en: "Do NOT apply a tourniquet", hi: "टूर्निकेट न लगाएं" },
-      { en: "Do NOT apply ice or cold packs", hi: "बर्फ या ठंडी पट्टी न लगाएं" }
+      { en: "Do NOT cut the wound or try to suck out venom", hi: "घाव को काटें नहीं या ज़हर चूसने की कोशिश न करें", kn: "ಗಾಯವನ್ನು ಕತ್ತರಿಸಬೇಡಿ ಅಥವಾ ವಿಷ ಹೀರಲು ಪ್ರಯತ್ನಿಸಬೇಡಿ" },
+      { en: "Do NOT apply a tourniquet", hi: "टूर्निकेट न लगाएं", kn: "ಟೂರ್ನಿಕೆಟ್ ಹಾಕಬೇಡಿ" },
+      { en: "Do NOT apply ice or cold packs", hi: "बर्फ या ठंडी पट्टी न लगाएं", kn: "ಐಸ್ ಅಥವಾ ಕೋಲ್ಡ್ ಪ್ಯಾಕ್ ಹಾಕಬೇಡಿ" }
     ]
   },
   {
@@ -29,23 +29,23 @@ const EMERGENCIES = [
     icon: "psychology",
     bgColor: "#F3E8FF",
     iconColor: "#9333EA",
-    title: { en: "Seizure", hi: "दौरा/मिर्गी" },
+    title: { en: "Seizure", hi: "दौरा/मिर्गी", kn: "ಮೂರ್ಛೆ/ಫಿಟ್ಸ್" },
     steps: [
-      { en: "Clear the area around the person of hard or sharp objects.", hi: "व्यक्ति के आसपास से कठोर या नुकीली वस्तुएं हटाएं।" },
-      { en: "Place something soft under their head.", hi: "उनके सिर के नीचे कुछ नरम रखें।" },
-      { en: "Turn them gently onto their side (recovery position).", hi: "उन्हें धीरे से करवट पर लिटाएं (रिकवरी पोज़िशन)।" },
-      { en: "Time the seizure. If it lasts more than 5 minutes, call 108.", hi: "दौरे का समय नोट करें। 5 मिनट से ज़्यादा हो तो 108 पर कॉल करें।" },
-      { en: "Stay with them until they are fully conscious.", hi: "पूरी तरह होश आने तक उनके साथ रहें।" }
+      { en: "Clear the area around the person of hard or sharp objects.", hi: "व्यक्ति के आसपास से कठोर या नुकीली वस्तुएं हटाएं।", kn: "ವ್ಯಕ್ತಿಯ ಸುತ್ತಲಿನ ಗಟ್ಟಿ ಅಥವಾ ಹರಿತ ವಸ್ತುಗಳನ್ನು ತೆಗೆಯಿರಿ." },
+      { en: "Place something soft under their head.", hi: "उनके सिर के नीचे कुछ नरम रखें।", kn: "ಅವರ ತಲೆಯ ಕೆಳಗೆ ಮೃದುವಾದ ವಸ್ತುವನ್ನು ಇರಿಸಿ." },
+      { en: "Turn them gently onto their side (recovery position).", hi: "उन्हें धीरे से करवट पर लिटाएं (रिकवरी पोज़िशन)।", kn: "ಅವರನ್ನು ಮೆಲ್ಲನೆ ಪಕ್ಕಕ್ಕೆ ತಿರುಗಿಸಿ (ರಿಕವರಿ ಸ್ಥಾನ)." },
+      { en: "Time the seizure. If it lasts more than 5 minutes, call 108.", hi: "दौरे का समय नोट करें। 5 मिनट से ज़्यादा हो तो 108 पर कॉल करें।", kn: "ಫಿಟ್ಸ್ ಸಮಯವನ್ನು ಗಮನಿಸಿ. 5 ನಿಮಿಷಕ್ಕಿಂತ ಹೆಚ್ಚಾದರೆ 108 ಗೆ ಕರೆ ಮಾಡಿ." },
+      { en: "Stay with them until they are fully conscious.", hi: "पूरी तरह होश आने तक उनके साथ रहें।", kn: "ಅವರಿಗೆ ಪೂರ್ಣ ಪ್ರಜ್ಞೆ ಬರುವವರೆಗೆ ಜೊತೆಯಲ್ಲಿರಿ." }
     ],
     dos: [
-      { en: "Protect their head", hi: "उनके सिर की रक्षा करें" },
-      { en: "Time the seizure", hi: "दौरे का समय नोट करें" },
-      { en: "Turn on side after seizure stops", hi: "दौरा रुकने के बाद करवट पर लिटाएं" }
+      { en: "Protect their head", hi: "उनके सिर की रक्षा करें", kn: "ಅವರ ತಲೆಯನ್ನು ರಕ್ಷಿಸಿ" },
+      { en: "Time the seizure", hi: "दौरे का समय नोट करें", kn: "ಫಿಟ್ಸ್ ಸಮಯ ಗಮನಿಸಿ" },
+      { en: "Turn on side after seizure stops", hi: "दौरा रुकने के बाद करवट पर लिटाएं", kn: "ಫಿಟ್ಸ್ ನಿಂತ ನಂತರ ಪಕ್ಕಕ್ಕೆ ತಿರುಗಿಸಿ" }
     ],
     donts: [
-      { en: "Do NOT hold them down or restrain them", hi: "उन्हें दबाकर या रोककर न रखें" },
-      { en: "Do NOT put anything in their mouth", hi: "उनके मुंह में कुछ भी न डालें" },
-      { en: "Do NOT tilt the head back", hi: "सिर को पीछे न झुकाएं" }
+      { en: "Do NOT hold them down or restrain them", hi: "उन्हें दबाकर या रोककर न रखें", kn: "ಅವರನ್ನು ಹಿಡಿದಿಡಬೇಡಿ ಅಥವಾ ನಿರ್ಬಂಧಿಸಬೇಡಿ" },
+      { en: "Do NOT put anything in their mouth", hi: "उनके मुंह में कुछ भी न डालें", kn: "ಅವರ ಬಾಯಿಯಲ್ಲಿ ಏನೂ ಹಾಕಬೇಡಿ" },
+      { en: "Do NOT tilt the head back", hi: "सिर को पीछे न झुकाएं", kn: "ತಲೆಯನ್ನು ಹಿಂದಕ್ಕೆ ಬಾಗಿಸಬೇಡಿ" }
     ]
   },
   {
@@ -53,21 +53,21 @@ const EMERGENCIES = [
     icon: "air",
     bgColor: "#EFF6FF",
     iconColor: "#2563EB",
-    title: { en: "Choking", hi: "गला घुटना" },
+    title: { en: "Choking", hi: "गला घुटना", kn: "ಗಂಟಲು ಕಟ್ಟುವಿಕೆ" },
     steps: [
-      { en: "Ask 'Are you choking?' If they cannot speak or cough, act immediately.", hi: "'क्या आपका गला घुट रहा है?' अगर बोल या खांस नहीं सकते, तुरंत कार्रवाई करें।" },
-      { en: "Stand behind the person. Wrap your arms around their waist.", hi: "व्यक्ति के पीछे खड़े हों। अपनी बाहें उनकी कमर के चारों ओर लपेटें।" },
-      { en: "Make a fist with one hand, place it above the navel.", hi: "एक हाथ की मुट्ठी बनाएं, नाभि के ऊपर रखें।" },
-      { en: "Give quick upward thrusts (Heimlich maneuver). Repeat until object comes out.", hi: "तेज़ ऊपर की ओर धक्के दें (हेमलिक मैन्यूवर)। वस्तु निकलने तक दोहराएं।" },
-      { en: "If person becomes unconscious, lower them to ground and begin CPR.", hi: "अगर व्यक्ति बेहोश हो जाए, ज़मीन पर लिटाएं और CPR शुरू करें।" }
+      { en: "Ask 'Are you choking?' If they cannot speak or cough, act immediately.", hi: "'क्या आपका गला घुट रहा है?' अगर बोल या खांस नहीं सकते, तुरंत कार्रवाई करें।", kn: "'ನಿಮ್ಮ ಗಂಟಲು ಕಟ್ಟಿದೆಯೇ?' ಮಾತನಾಡಲು ಅಥವಾ ಕೆಮ್ಮಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ ತಕ್ಷಣ ಕ್ರಮ ತೆಗೆದುಕೊಳ್ಳಿ." },
+      { en: "Stand behind the person. Wrap your arms around their waist.", hi: "व्यक्ति के पीछे खड़े हों। अपनी बाहें उनकी कमर के चारों ओर लपेटें।", kn: "ವ್ಯಕ್ತಿಯ ಹಿಂದೆ ನಿಲ್ಲಿ. ನಿಮ್ಮ ಕೈಗಳನ್ನು ಅವರ ಸೊಂಟದ ಸುತ್ತ ಸುತ್ತಿ." },
+      { en: "Make a fist with one hand, place it above the navel.", hi: "एक हाथ की मुट्ठी बनाएं, नाभि के ऊपर रखें।", kn: "ಒಂದು ಕೈಯಿಂದ ಮುಷ್ಟಿ ಮಾಡಿ, ಹೊಕ್ಕುಳ ಮೇಲೆ ಇರಿಸಿ." },
+      { en: "Give quick upward thrusts (Heimlich maneuver). Repeat until object comes out.", hi: "तेज़ ऊपर की ओर धक्के दें (हेमलिक मैन्यूवर)। वस्तु निकलने तक दोहराएं।", kn: "ವೇಗವಾಗಿ ಮೇಲಕ್ಕೆ ಒತ್ತಿ (ಹೈಮ್ಲಿಕ್). ವಸ್ತು ಹೊರಬರುವವರೆಗೆ ಪುನರಾವರ್ತಿಸಿ." },
+      { en: "If person becomes unconscious, lower them to ground and begin CPR.", hi: "अगर व्यक्ति बेहोश हो जाए, ज़मीन पर लिटाएं और CPR शुरू करें।", kn: "ವ್ಯಕ್ತಿ ಪ್ರಜ್ಞೆ ಕಳೆದುಕೊಂಡರೆ ನೆಲಕ್ಕೆ ಮಲಗಿಸಿ CPR ಪ್ರಾರಂಭಿಸಿ." }
     ],
     dos: [
-      { en: "Encourage coughing if they can", hi: "अगर खांस सकते हैं तो खांसने के लिए प्रोत्साहित करें" },
-      { en: "Use back blows + abdominal thrusts", hi: "पीठ पर थपकी + पेट पर धक्के दें" }
+      { en: "Encourage coughing if they can", hi: "अगर खांस सकते हैं तो खांसने के लिए प्रोत्साहित करें", kn: "ಕೆಮ್ಮಲು ಸಾಧ್ಯವಾದರೆ ಪ್ರೋತ್ಸಾಹಿಸಿ" },
+      { en: "Use back blows + abdominal thrusts", hi: "पीठ पर थपकी + पेट पर धक्के दें", kn: "ಬೆನ್ನಿಗೆ ಹೊಡೆತ + ಹೊಟ್ಟೆ ಒತ್ತಡ ಬಳಸಿ" }
     ],
     donts: [
-      { en: "Do NOT put fingers in the mouth blindly", hi: "अंधाधुंध मुंह में उंगली न डालें" },
-      { en: "Do NOT give water to drink", hi: "पानी पीने को न दें" }
+      { en: "Do NOT put fingers in the mouth blindly", hi: "अंधाधुंध मुंह में उंगली न डालें", kn: "ಕುರುಡಾಗಿ ಬಾಯಿಯಲ್ಲಿ ಬೆರಳು ಹಾಕಬೇಡಿ" },
+      { en: "Do NOT give water to drink", hi: "पानी पीने को न दें", kn: "ನೀರು ಕುಡಿಸಬೇಡಿ" }
     ]
   },
   {
@@ -75,22 +75,22 @@ const EMERGENCIES = [
     icon: "local_fire_department",
     bgColor: "#FEF2F2",
     iconColor: "#DC2626",
-    title: { en: "Burns", hi: "जलना" },
+    title: { en: "Burns", hi: "जलना", kn: "ಸುಟ್ಟಗಾಯ" },
     steps: [
-      { en: "Cool the burn under cool (not cold) running water for at least 10 minutes.", hi: "जले हुए हिस्से को कम से कम 10 मिनट तक ठंडे (बर्फीले नहीं) बहते पानी में रखें।" },
-      { en: "Remove clothing and jewelry near the burn, unless stuck to skin.", hi: "जले के पास के कपड़े और गहने हटाएं, जब तक कि त्वचा से चिपके न हों।" },
-      { en: "Cover with a clean, non-fluffy material like cling film or clean cloth.", hi: "साफ, गैर-रोएंदार सामग्री जैसे क्लिंग फिल्म या साफ कपड़े से ढकें।" },
-      { en: "Do not break any blisters that form.", hi: "बनने वाले किसी भी छाले को न फोड़ें।" },
-      { en: "Seek medical help for burns larger than your palm.", hi: "हथेली से बड़े जलने पर चिकित्सा सहायता लें।" }
+      { en: "Cool the burn under cool (not cold) running water for at least 10 minutes.", hi: "जले हुए हिस्से को कम से कम 10 मिनट तक ठंडे (बर्फीले नहीं) बहते पानी में रखें।", kn: "ಸುಟ್ಟ ಭಾಗವನ್ನು ಕನಿಷ್ಠ 10 ನಿಮಿಷ ತಂಪಾದ ಹರಿಯುವ ನೀರಿನ ಅಡಿಯಲ್ಲಿ ಇರಿಸಿ." },
+      { en: "Remove clothing and jewelry near the burn, unless stuck to skin.", hi: "जले के पास के कपड़े और गहने हटाएं, जब तक कि त्वचा से चिपके न हों।", kn: "ಸುಟ್ಟ ಜಾಗದ ಹತ್ತಿರದ ಬಟ್ಟೆ ಮತ್ತು ಆಭರಣ ತೆಗೆಯಿರಿ." },
+      { en: "Cover with a clean, non-fluffy material like cling film or clean cloth.", hi: "साफ, गैर-रोएंदार सामग्री जैसे क्लिंग फिल्म या साफ कपड़े से ढकें।", kn: "ಶುಚಿಯಾದ ಬಟ್ಟೆ ಅಥವಾ ಕ್ಲಿಂಗ್ ಫಿಲ್ಮ್‌ನಿಂದ ಮುಚ್ಚಿ." },
+      { en: "Do not break any blisters that form.", hi: "बनने वाले किसी भी छाले को न फोड़ें।", kn: "ಯಾವುದೇ ಬೊಬ್ಬೆಗಳನ್ನು ಒಡೆಯಬೇಡಿ." },
+      { en: "Seek medical help for burns larger than your palm.", hi: "हथेली से बड़े जलने पर चिकित्सा सहायता लें।", kn: "ಅಂಗೈಗಿಂತ ದೊಡ್ಡ ಸುಟ್ಟಗಾಯಕ್ಕೆ ವೈದ್ಯಕೀಯ ಸಹಾಯ ಪಡೆಯಿರಿ." }
     ],
     dos: [
-      { en: "Cool with running water for 10+ minutes", hi: "10+ मिनट तक बहते पानी से ठंडा करें" },
-      { en: "Cover loosely with clean material", hi: "साफ सामग्री से ढीला ढकें" }
+      { en: "Cool with running water for 10+ minutes", hi: "10+ मिनट तक बहते पानी से ठंडा करें", kn: "10+ ನಿಮಿಷ ಹರಿಯುವ ನೀರಿನಲ್ಲಿ ತಣ್ಣಗಾಗಿಸಿ" },
+      { en: "Cover loosely with clean material", hi: "साफ सामग्री से ढीला ढकें", kn: "ಶುಚಿ ವಸ್ತುವಿನಿಂದ ಸಡಿಲವಾಗಿ ಮುಚ್ಚಿ" }
     ],
     donts: [
-      { en: "Do NOT apply toothpaste, butter, or oil", hi: "टूथपेस्ट, मक्खन या तेल न लगाएं" },
-      { en: "Do NOT use ice directly on the burn", hi: "जले पर सीधे बर्फ का उपयोग न करें" },
-      { en: "Do NOT break blisters", hi: "छालों को न फोड़ें" }
+      { en: "Do NOT apply toothpaste, butter, or oil", hi: "टूथपेस्ट, मक्खन या तेल न लगाएं", kn: "ಟೂತ್‌ಪೇಸ್ಟ್, ಬೆಣ್ಣೆ, ಎಣ್ಣೆ ಹಚ್ಚಬೇಡಿ" },
+      { en: "Do NOT use ice directly on the burn", hi: "जले पर सीधे बर्फ का उपयोग न करें", kn: "ಸುಟ್ಟ ಜಾಗದ ಮೇಲೆ ನೇರವಾಗಿ ಐಸ್ ಬಳಸಬೇಡಿ" },
+      { en: "Do NOT break blisters", hi: "छालों को न फोड़ें", kn: "ಬೊಬ್ಬೆಗಳನ್ನು ಒಡೆಯಬೇಡಿ" }
     ]
   },
   {
@@ -98,23 +98,23 @@ const EMERGENCIES = [
     icon: "heart_broken",
     bgColor: "#FFF1F2",
     iconColor: "#E11D48",
-    title: { en: "Heart Attack", hi: "दिल का दौरा" },
+    title: { en: "Heart Attack", hi: "दिल का दौरा", kn: "ಹೃದಯಾಘಾತ" },
     steps: [
-      { en: "Call 108 immediately. Every minute matters.", hi: "तुरंत 108 पर कॉल करें। हर मिनट मायने रखता है।" },
-      { en: "Have the person sit down and rest in a comfortable position.", hi: "व्यक्ति को बैठाकर आरामदायक स्थिति में रखें।" },
-      { en: "If available, give one aspirin (325mg) to chew slowly.", hi: "अगर उपलब्ध हो, एक एस्पिरिन (325mg) धीरे-धीरे चबाने को दें।" },
-      { en: "Loosen any tight clothing around chest and neck.", hi: "छाती और गर्दन के आसपास के तंग कपड़े ढीले करें।" },
-      { en: "If person becomes unconscious and stops breathing, begin CPR.", hi: "अगर व्यक्ति बेहोश हो जाए और सांस रुक जाए, तो CPR शुरू करें।" }
+      { en: "Call 108 immediately. Every minute matters.", hi: "तुरंत 108 पर कॉल करें। हर मिनट मायने रखता है।", kn: "ತಕ್ಷಣ 108 ಗೆ ಕರೆ ಮಾಡಿ. ಪ್ರತಿ ನಿಮಿಷ ಮುಖ್ಯ." },
+      { en: "Have the person sit down and rest in a comfortable position.", hi: "व्यक्ति को बैठाकर आरामदायक स्थिति में रखें।", kn: "ವ್ಯಕ್ತಿಯನ್ನು ಆರಾಮದಾಯಕ ಸ್ಥಾನದಲ್ಲಿ ಕುಳ್ಳಿರಿಸಿ." },
+      { en: "If available, give one aspirin (325mg) to chew slowly.", hi: "अगर उपलब्ध हो, एक एस्पिरिन (325mg) धीरे-धीरे चबाने को दें।", kn: "ಲಭ್ಯವಿದ್ದರೆ ಒಂದು ಆಸ್ಪಿರಿನ್ ನಿಧಾನವಾಗಿ ಜಗಿಯಲು ಕೊಡಿ." },
+      { en: "Loosen any tight clothing around chest and neck.", hi: "छाती और गर्दन के आसपास के तंग कपड़े ढीले करें।", kn: "ಎದೆ ಮತ್ತು ಕುತ್ತಿಗೆಯ ಬಿಗಿ ಬಟ್ಟೆಗಳನ್ನು ಸಡಿಲಗೊಳಿಸಿ." },
+      { en: "If person becomes unconscious and stops breathing, begin CPR.", hi: "अगर व्यक्ति बेहोश हो जाए और सांस रुक जाए, तो CPR शुरू करें।", kn: "ಪ್ರಜ್ಞೆ ಕಳೆದು ಉಸಿರಾಟ ನಿಂತರೆ CPR ಪ್ರಾರಂಭಿಸಿ." }
     ],
     dos: [
-      { en: "Call 108 immediately", hi: "तुरंत 108 पर कॉल करें" },
-      { en: "Give aspirin if available", hi: "अगर उपलब्ध हो तो एस्पिरिन दें" },
-      { en: "Keep the person calm", hi: "व्यक्ति को शांत रखें" }
+      { en: "Call 108 immediately", hi: "तुरंत 108 पर कॉल करें", kn: "ತಕ್ಷಣ 108 ಗೆ ಕರೆ ಮಾಡಿ" },
+      { en: "Give aspirin if available", hi: "अगर उपलब्ध हो तो एस्पिरिन दें", kn: "ಲಭ್ಯವಿದ್ದರೆ ಆಸ್ಪಿರಿನ್ ಕೊಡಿ" },
+      { en: "Keep the person calm", hi: "व्यक्ति को शांत रखें", kn: "ವ್ಯಕ್ತಿಯನ್ನು ಶಾಂತವಾಗಿರಿಸಿ" }
     ],
     donts: [
-      { en: "Do NOT let the person walk or exert themselves", hi: "व्यक्ति को चलने या मेहनत न करने दें" },
-      { en: "Do NOT ignore chest pain as 'gas'", hi: "सीने के दर्द को 'गैस' समझकर अनदेखा न करें" },
-      { en: "Do NOT give water if person is unconscious", hi: "बेहोश व्यक्ति को पानी न दें" }
+      { en: "Do NOT let the person walk or exert themselves", hi: "व्यक्ति को चलने या मेहनत न करने दें", kn: "ವ್ಯಕ್ತಿಯನ್ನು ನಡೆಯಲು ಅಥವಾ ಶ್ರಮಿಸಲು ಬಿಡಬೇಡಿ" },
+      { en: "Do NOT ignore chest pain as 'gas'", hi: "सीने के दर्द को 'गैस' समझकर अनदेखा न करें", kn: "ಎದೆ ನೋವನ್ನು 'ಗ್ಯಾಸ್' ಎಂದು ನಿರ್ಲಕ್ಷಿಸಬೇಡಿ" },
+      { en: "Do NOT give water if person is unconscious", hi: "बेहोश व्यक्ति को पानी न दें", kn: "ಪ್ರಜ್ಞೆ ಇಲ್ಲದಿದ್ದರೆ ನೀರು ಕೊಡಬೇಡಿ" }
     ]
   },
   {
@@ -122,21 +122,21 @@ const EMERGENCIES = [
     icon: "waves",
     bgColor: "#ECFEFF",
     iconColor: "#0891B2",
-    title: { en: "Drowning", hi: "डूबना" },
+    title: { en: "Drowning", hi: "डूबना", kn: "ಮುಳುಗುವಿಕೆ" },
     steps: [
-      { en: "Get the person out of water safely. Do not put yourself at risk.", hi: "व्यक्ति को सुरक्षित रूप से पानी से बाहर निकालें। खुद को खतरे में न डालें।" },
-      { en: "Call 108 immediately.", hi: "तुरंत 108 पर कॉल करें।" },
-      { en: "Check if they are breathing. If not, begin CPR immediately.", hi: "जांचें कि क्या वे सांस ले रहे हैं। अगर नहीं, तुरंत CPR शुरू करें।" },
-      { en: "If breathing, place in recovery position (on their side).", hi: "अगर सांस ले रहे हैं, रिकवरी पोज़िशन में रखें (करवट पर)।" },
-      { en: "Keep them warm with a blanket or dry clothes.", hi: "कंबल या सूखे कपड़ों से गर्म रखें।" }
+      { en: "Get the person out of water safely. Do not put yourself at risk.", hi: "व्यक्ति को सुरक्षित रूप से पानी से बाहर निकालें। खुद को खतरे में न डालें।", kn: "ವ್ಯಕ್ತಿಯನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ನೀರಿನಿಂದ ಹೊರತೆಗೆಯಿರಿ." },
+      { en: "Call 108 immediately.", hi: "तुरंत 108 पर कॉल करें।", kn: "ತಕ್ಷಣ 108 ಗೆ ಕರೆ ಮಾಡಿ." },
+      { en: "Check if they are breathing. If not, begin CPR immediately.", hi: "जांचें कि क्या वे सांस ले रहे हैं। अगर नहीं, तुरंत CPR शुरू करें।", kn: "ಉಸಿರಾಟ ಇದೆಯೇ ಪರೀಕ್ಷಿಸಿ. ಇಲ್ಲದಿದ್ದರೆ ತಕ್ಷಣ CPR ಪ್ರಾರಂಭಿಸಿ." },
+      { en: "If breathing, place in recovery position (on their side).", hi: "अगर सांस ले रहे हैं, रिकवरी पोज़िशन में रखें (करवट पर)।", kn: "ಉಸಿರಾಡುತ್ತಿದ್ದರೆ ರಿಕವರಿ ಸ್ಥಾನದಲ್ಲಿ ಇರಿಸಿ." },
+      { en: "Keep them warm with a blanket or dry clothes.", hi: "कंबल या सूखे कपड़ों से गर्म रखें।", kn: "ಕಂಬಳಿ ಅಥವಾ ಒಣ ಬಟ್ಟೆಯಿಂದ ಬೆಚ್ಚಗಿರಿಸಿ." }
     ],
     dos: [
-      { en: "Start CPR if not breathing", hi: "सांस न हो तो CPR शुरू करें" },
-      { en: "Keep them warm", hi: "उन्हें गर्म रखें" }
+      { en: "Start CPR if not breathing", hi: "सांस न हो तो CPR शुरू करें", kn: "ಉಸಿರಿಲ್ಲದಿದ್ದರೆ CPR ಪ್ರಾರಂಭಿಸಿ" },
+      { en: "Keep them warm", hi: "उन्हें गर्म रखें", kn: "ಬೆಚ್ಚಗಿರಿಸಿ" }
     ],
     donts: [
-      { en: "Do NOT try to drain water from lungs", hi: "फेफड़ों से पानी निकालने की कोशिश न करें" },
-      { en: "Do NOT leave them alone", hi: "उन्हें अकेला न छोड़ें" }
+      { en: "Do NOT try to drain water from lungs", hi: "फेफड़ों से पानी निकालने की कोशिश न करें", kn: "ಶ್ವಾಸಕೋಶದಿಂದ ನೀರು ತೆಗೆಯಲು ಪ್ರಯತ್ನಿಸಬೇಡಿ" },
+      { en: "Do NOT leave them alone", hi: "उन्हें अकेला न छोड़ें", kn: "ಅವರನ್ನು ಒಂಟಿಯಾಗಿ ಬಿಡಬೇಡಿ" }
     ]
   },
   {
@@ -144,7 +144,7 @@ const EMERGENCIES = [
     icon: "skeleton",
     bgColor: "#F8FAFC",
     iconColor: "#475569",
-    title: { en: "Fracture", hi: "हड्डी टूटना" },
+    title: { en: "Fracture", hi: "हड्डी टूटना", kn: "ಮೂಳೆ ಮುರಿತ" },
     steps: [
       { en: "Do not move the injured area. Keep it as still as possible.", hi: "चोटिल हिस्से को हिलाएं नहीं। जितना हो सके स्थिर रखें।" },
       { en: "Apply a splint using stiff material (stick, cardboard) padded with cloth.", hi: "कठोर सामग्री (छड़ी, गत्ता) से कपड़े की गद्दी लगाकर स्प्लिंट लगाएं।" },
@@ -166,7 +166,7 @@ const EMERGENCIES = [
     icon: "blood_pressure",
     bgColor: "#FEF2F2",
     iconColor: "#B91C1C",
-    title: { en: "Severe Bleeding", hi: "गंभीर रक्तस्राव" },
+    title: { en: "Severe Bleeding", hi: "गंभीर रक्तस्राव", kn: "ತೀವ್ರ ರಕ್ತಸ್ರಾವ" },
     steps: [
       { en: "Apply firm, direct pressure on the wound with a clean cloth.", hi: "साफ कपड़े से घाव पर सीधा मजबूत दबाव लगाएं।" },
       { en: "Do not remove the cloth. If soaked, add more layers on top.", hi: "कपड़ा न हटाएं। अगर भीग जाए, ऊपर और परतें लगाएं।" },
@@ -188,7 +188,7 @@ const EMERGENCIES = [
     icon: "bed",
     bgColor: "#EEF2FF",
     iconColor: "#4F46E5",
-    title: { en: "Unconscious Person", hi: "बेहोश व्यक्ति" },
+    title: { en: "Unconscious Person", hi: "बेहोश व्यक्ति", kn: "ಪ್ರಜ್ಞೆ ತಪ್ಪಿದ ವ್ಯಕ್ತಿ" },
     steps: [
       { en: "Check if the person is responsive — tap shoulders and shout.", hi: "जांचें कि व्यक्ति प्रतिक्रिया दे रहा है — कंधे थपथपाएं और ज़ोर से बोलें।" },
       { en: "Call 108 immediately.", hi: "तुरंत 108 पर कॉल करें।" },
@@ -210,7 +210,7 @@ const EMERGENCIES = [
     icon: "bolt",
     bgColor: "#FEFCE8",
     iconColor: "#CA8A04",
-    title: { en: "Electric Shock", hi: "बिजली का झटका" },
+    title: { en: "Electric Shock", hi: "बिजली का झटका", kn: "ವಿದ್ಯುತ್ ಆಘಾತ" },
     steps: [
       { en: "Do NOT touch the person if they are still in contact with the electrical source.", hi: "अगर व्यक्ति अभी भी बिजली के स्रोत के संपर्क में है तो उन्हें न छुएं।" },
       { en: "Turn off the power source or use a dry non-conducting object to separate them.", hi: "बिजली का स्रोत बंद करें या सूखी गैर-चालक वस्तु से अलग करें।" },
@@ -232,7 +232,7 @@ const EMERGENCIES = [
     icon: "device_thermostat",
     bgColor: "#FFF7ED",
     iconColor: "#C2410C",
-    title: { en: "Heat Stroke", hi: "लू लगना" },
+    title: { en: "Heat Stroke", hi: "लू लगना", kn: "ಶಾಖಾಘಾತ" },
     steps: [
       { en: "Move the person to a cool, shaded area immediately.", hi: "व्यक्ति को तुरंत ठंडी, छायादार जगह पर ले जाएं।" },
       { en: "Remove excess clothing.", hi: "अतिरिक्त कपड़े हटाएं।" },
@@ -254,7 +254,7 @@ const EMERGENCIES = [
     icon: "eco",
     bgColor: "#F0FDF4",
     iconColor: "#16A34A",
-    title: { en: "Allergic Reaction", hi: "एलर्जी प्रतिक्रिया" },
+    title: { en: "Allergic Reaction", hi: "एलर्जी प्रतिक्रिया", kn: "ಅಲರ್ಜಿ ಪ್ರತಿಕ್ರಿಯೆ" },
     steps: [
       { en: "Call 108 if the person has difficulty breathing or swelling of face/throat.", hi: "अगर सांस लेने में कठिनाई या चेहरे/गले में सूजन हो तो 108 पर कॉल करें।" },
       { en: "If they have an EpiPen, help them use it on outer thigh.", hi: "अगर उनके पास EpiPen है, बाहरी जांघ पर उपयोग करने में मदद करें।" },

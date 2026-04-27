@@ -37,9 +37,11 @@ const diagnosis = {
         const input = document.getElementById('ai-input').value.trim();
         if (!input) return;
         
-        if (!app.state.isOnline) {
-            alert('AI Analysis requires an internet connection.');
-            return;
+        if (!app.state.isOnline) { alert('AI Analysis requires an internet connection.'); return; }
+        
+        if (!GROQ_API_KEY) {
+            const key = prompt('Enter your free Groq API key (get one at console.groq.com):');
+            if (key) { setGroqKey(key); } else { return; }
         }
         
         document.getElementById('ai-loading').classList.remove('hidden');
