@@ -1,7 +1,7 @@
 // ===== JeevanAid Supabase Client =====
 const SUPABASE_URL = 'https://uzfbjrpgpvawguyhngeg.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6ZmJqcnBncHZhd2d1eWhuZ2VnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyODU5MzYsImV4cCI6MjA5Mjg2MTkzNn0.LIwgn_rS2BlcG-28CGw4kG3gYigbJEdS_XEN5QBuKSw';
-const GEMINI_API_KEY = 'AIzaSyCuZSeCBCSXXTUmsFSwa4A5htnXPKwLRj4';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY';
 
 let _sbClient = null;
 
